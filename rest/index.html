@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  
+    - Metatags principales  
+  -->
+  
+  <title>Grilli - Deliciosa comida</title> 
+  <!-- Define el título de la página que aparecerá en la pestaña del navegador -->
+
+  <meta name="title" content="Grilli - Deliciosa comida">
+  <!-- Define el título de la página para los motores de búsqueda -->
+
+  <meta name="description" content="Esta es una plantilla html de restaurante.">
+  <!-- Proporciona una descripción de la página para los motores de búsqueda y redes sociales -->
+
+
+  <!--  
+    - Favicon  
+  -->
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <!-- Especifica el ícono de la página (favicon) que se mostrará en la pestaña del navegador -->
+
+
+    <!--  
+    - Enlace a la fuente de Google  
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Establece una conexión previa con Google Fonts para acelerar la carga de las fuentes -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Establece una conexión previa con el servidor de Google Fonts para cargar archivos estáticos de manera más eficiente -->
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+  <!-- Importa las fuentes "DM Sans" (con pesos 400 y 700) y "Forum" desde Google Fonts para su uso en la página -->
+
+
+  <!--  
+    - Enlace al CSS personalizado  
+  -->
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Importa la hoja de estilos personalizada para aplicar diseño a la página -->
+
+
+  <!--  
+    - Precargar imágenes  
+  -->
+
+  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
+  <!-- Precarga la imagen "hero-slider-1.jpg" para mejorar el rendimiento y reducir el tiempo de carga -->
+
+  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
+  <!-- Precarga la imagen "hero-slider-2.jpg" para que aparezca más rápido cuando sea necesaria -->
+
+  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+  <!-- Precarga la imagen "hero-slider-3.jpg" para optimizar la carga del contenido visual -->
+
+</head>
+
+
+<body id="top">
+  <!--  
+    - #Precargador  
+  -->
+  <div class="preload" data-preaload>
+    <!-- Contenedor del precargador, que se muestra mientras la página se carga -->
+
+    <div class="circle"></div>
+    <!-- Elemento visual con forma de círculo para la animación del precargador -->
+
+    <p class="text">Grilli</p>
+    <!-- Texto que se muestra dentro del precargador -->
+  </div>
+
+
+  <!--  
+    - Barra superior (#TOP BAR)  
+  -->
+  <div class="topbar">
+    <!-- Contenedor de la barra superior, que muestra información de contacto y ubicación -->
+
+    <div class="container">
+      <!-- Contenedor interno para organizar los elementos de la barra superior -->
+
+      <address class="topbar-item">
+        <!-- Muestra la dirección del restaurante -->
+
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <!-- Ícono de ubicación -->
+
+        <span class="span">
+          Avenida Malecón de la Reserva 610, Miraflores, Lima 18, Perú
+        </span>
+        <!-- Texto con la dirección del restaurante -->
+      </address>
+
+      <div class="separator"></div>
+      <!-- Separador visual entre elementos de la barra superior -->
+
+      <div class="topbar-item item-2">
+        <!-- Contenedor para la información del horario de atención -->
+
+        <div class="icon">
+          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <!-- Ícono de reloj para indicar horario -->
+
+        <span class="span">Diario : 8.00 am a 10.00 pm</span>
+        <!-- Texto con el horario de atención del restaurante -->
+      </div>
+
+      <a href="tel:+11234567890" class="topbar-item link">
+        <!-- Enlace clickeable para llamar al restaurante -->
+
+        <div class="icon">
+          <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+        </div>
+        <!-- Ícono de whatsapp para indicar contacto -->
+      
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <!-- Ícono de teléfono para indicar contacto -->
+
+        <span class="span">+1 123 456 7890</span>
+        <!-- Número de teléfono del restaurante -->
+      </a>
+
+      <div class="separator"></div>
+      <!-- Separador visual entre elementos de la barra superior -->
+
+      <a href="mailto:xxxx@restaurant.com" class="topbar-item link">
+        <!-- Enlace clickeable para enviar un correo electrónico -->
+
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+        <!-- Ícono de correo electrónico -->
+
+        <span class="span">xxxx@restaurant.com</span>
+        <!-- Dirección de correo electrónico del restaurante -->
+      </a>
+
+    </div>
+  </div>
+
+
+  <!--  
+    - Encabezado (#HEADER)  
+  -->
+  <header class="header" data-header>
+    <!-- Contenedor principal del encabezado de la página -->
+
+    <div class="container">
+      <!-- Contenedor interno para organizar los elementos del encabezado -->
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+      </a>
+      <!-- Logo del restaurante con enlace a la página principal -->
+
+      <nav class="navbar" data-navbar>
+        <!-- Barra de navegación del sitio -->
+
+        <button class="close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+        <!-- Botón para cerrar el menú de navegación en dispositivos móviles -->
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+        </a>
+        <!-- Logo repetido dentro del menú de navegación -->
+
+        <ul class="navbar-list">
+          <!-- Lista de enlaces de navegación -->
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+              <!-- Separador decorativo -->
+
+              <span class="span">Home</span>
+              <!-- Enlace a la sección de inicio -->
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#menu" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Menus</span>
+              <!-- Enlace a la sección de menús -->
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Nosotros</span>
+              <!-- Enlace a la sección "Sobre nosotros" -->
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#footer" class="navbar-link hover-underline"> <!-- Seguir para la SECCION de la pagina donde esta los contactos -->
+              <div class="separator"></div>
+              <span class="span">Contactos</span>
+              <!-- Enlace a la sección de contacto -->
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="text-center">
+          <!-- Contenedor con información de contacto -->
+
+          <p class="headline-1 navbar-title">Visit Us</p>
+          <!-- Título de la sección de contacto -->
+
+          <address class="body-4">
+            Restaurant St, Delicious City, <br>
+            London 9578, UK
+          </address>
+          <!-- Dirección del restaurante -->
+
+          <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+          <!-- Horario de apertura del restaurante -->
+
+          <a href="mailto:xxxx@grilli.com" class="body-4 sidebar-link">xxxx@grilli.com</a>
+          <!-- Enlace de correo electrónico para reservas -->
+
+          <div class="separator"></div>
+          <!-- Separador decorativo -->
+
+          <p class="contact-label">Booking Request</p>
+          <!-- Etiqueta para el número de reservas -->
+
+          <a href="tel:+1 123 456 7890" class="body-1 contact-number hover-underline">
+            +1 123 456 7890
+          </a>
+          <!-- Número de teléfono para reservas -->
+        </div>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+      <!-- Botón para abrir el menú en dispositivos móviles -->
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+      <!-- Capa de fondo para oscurecer la pantalla cuando el menú está abierto -->
+
+    </div>
+  </header>
+
+
+<main>
+  <article>
+     <!--  
+        - Sección principal del sitio web 
+      -->
+
+      <!--  
+        - Sección Hero (#HERO)  
+      -->
+      <section class="hero text-center" aria-label="home" id="home">
+        <!-- Sección principal de bienvenida con un carrusel de imágenes -->
+
+        <ul class="hero-slider" data-hero-slider>
+          <!-- Lista de diapositivas del carrusel -->
+
+          <li class="slider-item active" data-hero-slider-item>
+            <!-- Primera diapositiva del carrusel (activa por defecto) -->
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+            <!-- Imagen de fondo para la diapositiva -->
+
+            <p class="label-2 section-subtitle slider-reveal">Tradicional e Higiénico</p>
+            <!-- Subtítulo descriptivo de la diapositiva -->
+
+            <h1 class="display-1 hero-title slider-reveal">
+              Por el amor a <br>
+              la comida deliciosa
+            </h1>
+            <!-- Título principal de la diapositiva -->
+
+            <p class="body-2 hero-text slider-reveal">
+              Ven con la familia y disfruta de la alegría de una comida deliciosa
+            </p>
+            <!-- Texto descriptivo de la diapositiva -->
+
+            <a href="#" class="btn btn-primary slider-reveal">
+              <span class="text text-1">Ver Nuestro Menú</span>
+              <span class="text text-2" aria-hidden="true">Ver Nuestro Menú</span>
+            </a>
+            <!-- Botón para ver todo el menú que LEVARIA a un pdf del menu o algo parecido -->
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+            <!-- Segunda diapositiva del carrusel -->
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-2.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+            <!-- Imagen de fondo para la diapositiva -->
+
+            <p class="label-2 section-subtitle slider-reveal">Experiencia encantadora</p>
+            <!-- Subtítulo descriptivo de la diapositiva -->
+
+            <h1 class="display-1 hero-title slider-reveal">
+              Sabores inspirados <br>
+              en las estaciones
+            </h1>
+            <!-- Título principal de la diapositiva -->
+
+            <p class="body-2 hero-text slider-reveal">
+              Ven con la familia y disfruta de la alegría de una comida deliciosa
+            </p>
+            <!-- Texto descriptivo de la diapositiva -->
+
+            <a href="#" class="btn btn-primary slider-reveal">
+              <span class="text text-1">Ver Nuestro Menú</span>
+              <span class="text text-2" aria-hidden="true">Ver Nuestro Menú</span>
+            </a>
+            <!-- Botón para ver el menú -->
+          </li>
+
+          <li class="slider-item" data-hero-slider-item>
+            <!-- Tercera diapositiva del carrusel -->
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-3.jpg" width="1880" height="950" alt="" class="img-cover">
+            </div>
+            <!-- Imagen de fondo para la diapositiva -->
+
+            <p class="label-2 section-subtitle slider-reveal">Increíble y delicioso</p>
+            <!-- Subtítulo descriptivo de la diapositiva -->
+
+            <h1 class="display-1 hero-title slider-reveal">
+              Donde cada sabor <br>
+              cuenta una historia
+            </h1>
+            <!-- Título principal de la diapositiva -->
+
+            <p class="body-2 hero-text slider-reveal">
+              Ven con la familia y disfruta de la alegría de una comida deliciosa
+            </p>
+            <!-- Texto descriptivo de la diapositiva -->
+
+            <a href="#" class="btn btn-primary slider-reveal">
+              <span class="text text-1">Ver Nuestro Menú</span>
+              <span class="text text-2" aria-hidden="true">Ver Nuestro Menú</span>
+            </a>
+            <!-- Botón para ver el menú -->
+          </li>
+
+        </ul>
+
+        <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+          <ion-icon name="chevron-back"></ion-icon>
+        </button>
+        <!-- Botón para retroceder en el carrusel -->
+
+        <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+        <!-- Botón para avanzar en el carrusel -->
+
+        <a href="#reservation" class="hero-btn has-after"> <!-- Cambia el href="#" por href="#reservation" para que apunte a la sección.-->
+          <img src="./assets/images/hero-icon.png" width="48" height="48" alt="Ícono de reserva">
+          <span class="label-2 text-center span">Reservar una Mesa</span>
+      </a>
+        <!-- Botón de reserva de mesa -->
+       </section>
+
+
+     <!--  
+        - #SERVICIOS
+      -->
+      <section class="section service bg-black-10 text-center" aria-label="service">
+        <div class="container">
+          <!-- Contenedor principal de la sección -->
+
+          <p class="section-subtitle label-2">Sabores para la realeza</p>
+          <!-- Subtítulo de la sección -->
+
+          <h2 class="headline-1 section-title">Ofrecemos lo mejor</h2>
+          <!-- Título principal de la sección -->
+
+          <p class="section-text">
+            Sabores únicos, ingredientes frescos y platos irresistibles. Disfruta una experiencia gastronómica inolvidable en Grilli.
+          </p>
+          <!-- Descripción breve de la sección -->
+
+          <ul class="grid-list">
+            <!-- Lista en cuadrícula para mostrar los servicios -->
+
+            <li>
+              <div class="service-card">
+                <!-- Tarjeta del servicio: Desayuno -->
+
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/service-1.jpg" width="285" height="336" loading="lazy" alt="Desayuno"
+                      class="img-cover">
+                  </figure>
+                </a>
+                <!-- Imagen del servicio -->
+
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="#">Desayuno</a>
+                  </h3>
+                  <!-- Nombre del servicio -->
+
+                  <a href="#" class="btn-text hover-underline label-2">Ver Menú</a>
+                  <!-- Botón para ver el menú -->
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+                <!-- Tarjeta del servicio: Aperitivos -->
+
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/service-2.jpg" width="285" height="336" loading="lazy" alt="Aperitivos"
+                      class="img-cover">
+                  </figure>
+                </a>
+                <!-- Imagen del servicio -->
+
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="#">Aperitivos</a>
+                  </h3>
+                  <!-- Nombre del servicio -->
+
+                  <a href="#" class="btn-text hover-underline label-2">Ver Menú</a>
+                  <!-- Botón para ver el menú -->
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+                <!-- Tarjeta del servicio: Bebidas -->
+
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/service-3.jpg" width="285" height="336" loading="lazy" alt="Bebidas"
+                      class="img-cover">
+                  </figure>
+                </a>
+                <!-- Imagen del servicio -->
+
+                <div class="card-content">
+                  <h3 class="title-4 card-title">
+                    <a href="#">Bebidas</a>
+                  </h3>
+                  <!-- Nombre del servicio -->
+
+                  <a href="#" class="btn-text hover-underline label-2">Ver Menú</a>
+                  <!-- Botón para ver el menú -->
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="forma decorativa"
+            class="shape shape-1 move-anim">
+          <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="forma decorativa"
+            class="shape shape-2 move-anim">
+          <!-- Elementos decorativos animados -->
+
+        </div>
+      </section>
+
+       <!--  
+        - #SOBRE NOSOTROS
+      -->
+      <section class="section about text-center" aria-labelledby="about-label" id="about">
+        <div class="container">
+          <!-- Contenedor principal de la sección -->
+
+          <div class="about-content">
+            <!-- Contenedor del contenido de la sección -->
+
+            <p class="label-2 section-subtitle" id="about-label">Nuestra Historia</p>
+            <!-- Subtítulo de la sección -->
+
+            <h2 class="headline-1 section-title">Cada Sabor Cuenta una Historia</h2>
+            <!-- Título principal de la sección -->
+
+            <p class="section-text">
+              En Grilli, nacimos con la pasión de compartir sabores únicos y momentos inolvidables. 
+              Desde nuestros inicios, hemos trabajado con ingredientes frescos y recetas cuidadosamente elaboradas para ofrecer una experiencia gastronómica auténtica. 
+              Cada plato refleja nuestro amor por la cocina y el compromiso de brindar calidad y calidez en cada visita. ¡Bienvenidos a nuestro hogar del buen sabor!
+            </p>
+            <!-- Texto descriptivo de la historia del restaurante -->
+
+            <div class="contact-label">Reserva por Teléfono</div>
+            <!-- Etiqueta indicando que se puede reservar por llamada -->
+
+            <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+1 123 456 7890</a>
+            <!-- Número de teléfono para reservas -->
+
+<!--
+            <a href="#" class="btn btn-primary">
+              <span class="text text-1">Leer Más</span>
+              <span class="text text-2" aria-hidden="true">Leer Más</span>
+            </a>
+            <!-- Botón para leer más sobre la historia del restaurante -->
+
+          </div>
+
+          <figure class="about-banner">
+            <!-- Contenedor de la imagen principal -->
+
+            <img src="./assets/images/about-banner.jpg" width="570" height="570" loading="lazy" alt="Imagen principal sobre nosotros"
+              class="w-100" data-parallax-item data-parallax-speed="1">
+            <!-- Imagen principal con efecto parallax -->
+
+            <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
+              <img src="./assets/images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt="Imagen decorativa"
+                class="w-100">
+            </div>
+            <!-- Imagen decorativa flotante con efecto parallax -->
+
+            <div class="abs-img abs-img-2 has-before">
+              <img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="Insignia del restaurante">
+            </div>
+            <!-- Insignia decorativa del restaurante -->
+
+          </figure>
+
+          <img src="./assets/images/shape-3.png" width="197" height="194" loading="lazy" alt="Elemento decorativo" class="shape">
+          <!-- Elemento decorativo adicional -->
+
+        </div>
+      </section>
+
+
+      <!--  
+        - #PLATO ESPECIAL
+      -->
+      <section class="special-dish text-center" aria-labelledby="dish-label">
+        <!-- Sección del plato especial con alineación centrada -->
+
+        <div class="special-dish-banner">
+          <img src="./assets/images/special-dish-banner.jpg" width="940" height="900" loading="lazy" 
+            alt="Plato especial" class="img-cover">
+        </div>
+        <!-- Imagen destacada del plato especial -->
+
+        <div class="special-dish-content bg-black-10">
+          <!-- Contenedor del contenido con fondo oscuro -->
+
+          <div class="container">
+            <!-- Contenedor principal -->
+
+            <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" 
+              alt="Insignia" class="abs-img">
+            <!-- Imagen decorativa de insignia -->
+
+            <p class="section-subtitle label-2">Plato Especial</p>
+            <!-- Subtítulo de la sección -->
+
+            <h2 class="headline-1 section-title">Tortellini</h2>
+            <!-- Nombre del plato especial -->
+
+            <p class="section-text">
+              Delicados y suaves tortellini rellenos con una mezcla exquisita de ingredientes selectos, bañados en una salsa cremosa y aromática. 
+              Cada bocado es una combinación perfecta de texturas y sabores, ideal para los amantes de la gastronomía refinada.
+              ¡Una experiencia culinaria que deleita los sentidos!
+            </p>
+            <!-- Descripción del plato especial -->
+
+            <div class="wrapper">
+              <del class="del body-3">S/50.00 </del>
+              <!-- Precio anterior tachado -->
+
+              <span class="span body-1">S/30.00 </span>
+              <!-- Nuevo precio con descuento -->
+            </div>
+
+            <a href="#" class="btn btn-primary">
+              <span class="text text-1">Ver Todo el Menú</span>
+              <span class="text text-2" aria-hidden="true">Ver Todo el Menú</span>
+            </a>
+            <!-- Botón para ver todo el menú que LEVARIA a un pdf del menu o algo parecido -->
+
+          </div>
+        </div>
+
+        <img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" 
+          alt="Elemento decorativo" class="shape shape-1">
+        <!-- Elemento decorativo flotante -->
+
+        <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" 
+          alt="Elemento decorativo" class="shape shape-2">
+        <!-- Otro elemento decorativo flotante -->
+
+      </section>
+
+
+       <!--  
+        - #MENÚ
+      -->
+      <section class="section menu" aria-label="menu-label" id="menu">
+        <!-- Sección del menú con un identificador único -->
+
+        <div class="container">
+          <!-- Contenedor principal -->
+
+          <p class="section-subtitle text-center label-2">Selección Especial</p>
+          <!-- Subtítulo del menú -->
+
+          <h2 class="headline-1 section-title text-center">Menú Delicioso</h2>
+          <!-- Título principal de la sección -->
+
+          <ul class="grid-list">
+            <!-- Lista de platos en formato de grilla -->
+
+            <li>
+              <div class="menu-card hover:card">
+                <!-- Tarjeta del plato -->
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" 
+                    alt="Ensalada Griega" class="img-cover">
+                </figure>
+                <!-- Imagen del plato -->
+
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="#" class="card-title">Ensalada Griega</a>
+                    </h3>
+
+                    <span class="badge label-1">De Temporada</span>
+                    <!-- Etiqueta indicando que es de temporada -->
+
+                    <span class="span title-2">S/20.50</span>
+                    <!-- Precio del plato -->
+                  </div>
+
+                  <p class="card-text label-1">
+                    Tomates, pimiento verde, pepino en rodajas, cebolla, aceitunas y queso feta.
+                  </p>
+                  <!-- Descripción del plato -->
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" 
+                    alt="Lasaña" class="img-cover">
+                </figure>
+
+                <div>
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="#" class="card-title">Lasaña</a>
+                    </h3>
+
+                    <span class="span title-2">S/45.00</span>
+                  </div>
+
+                  <p class="card-text label-1">
+                    Verduras, quesos, carnes molidas, salsa de tomate, condimentos y especias.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- Se repite la estructura para otros platos -->
+
+          </ul>
+
+          <p class="menu-text text-center">
+            Durante el verano, todos los días de <span class="span">7:00 pm</span> a <span class="span">9:00 pm</span>
+          </p>
+          <!-- Horario del menú especial -->
+
+          <a href="#" class="btn btn-primary">
+            <span class="text text-1">Ver Todo el Menú</span> <!-- Link para pagina de la carta o archivo para descarga -->
+            <span class="text text-2" aria-hidden="true">Ver Todo el Menú</span>
+          </a>
+          <!-- Botón para ver todo el menú que LEVARIA a un pdf del menu o algo parecido -->
+
+          <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" 
+            alt="Elemento decorativo" class="shape shape-2 move-anim">
+          <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" 
+            alt="Elemento decorativo" class="shape shape-3 move-anim">
+          <!-- Elementos decorativos animados -->
+
+        </div>
+      </section>
+
+
+      <!--  
+        - #TESTIMONIOS
+      -->
+      <section class="section testi text-center has-bg-image"
+        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
+        <!-- Sección de testimonios con imagen de fondo -->
+
+        <div class="container">
+          <!-- Contenedor principal -->
+
+          <div class="quote">”</div>
+          <!-- Comillas decorativas para resaltar el testimonio -->
+
+          <p class="headline-2 testi-text">
+            Quería agradecerles por invitarme a esa increíble cena la otra noche. La comida fue extraordinaria.
+          </p>
+          <!-- Texto del testimonio -->
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+          <!-- Separadores decorativos -->
+
+          <div class="profile">
+            <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" 
+              alt="Sam Jhonson" class="img">
+            <!-- Imagen del autor del testimonio -->
+
+            <p class="label-2 profile-name">Sam Jhonson</p>
+            <!-- Nombre del autor del testimonio -->
+          </div>
+
+        </div>
+      </section>
+
+
+      <!--  
+        - #RESERVACIÓN
+      -->
+      <section id="reservation" class="reservation"> <!-- Class que tiene el id de scroll al precionar "reservar mesa" -->
+        <div class="container">
+          <!-- Contenedor principal de la sección de reservación -->
+
+          <div class="form reservation-form bg-black-10">
+            <!-- Formulario de reservación con fondo oscuro -->
+
+            <form action="" class="form-left">
+              <!-- Formulario principal -->
+
+              <h2 class="headline-1 text-center">Reservación en Línea</h2>
+              <!-- Título del formulario -->
+
+              <p class="form-text text-center">
+                Solicitud de reserva <a href="tel:+1 123 456 7890" class="link">+1 123 456 7890</a>
+                o complete el formulario de pedido
+              </p>
+              <!-- Información de contacto -->
+
+              <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Tu Nombre" autocomplete="off" class="input-field">
+                <input type="tel" name="phone" placeholder="Número de Teléfono" autocomplete="off" class="input-field">
+              </div>
+              <!-- Campos para ingresar nombre y número de teléfono -->
+
+              <div class="input-wrapper">
+
+                <div class="icon-wrapper">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                  <select name="person" class="input-field">
+                    <option value="1-person">1 Persona</option>
+                    <option value="2-person">2 Personas</option>
+                    <option value="3-person">3 Personas</option>
+                    <option value="4-person">4 Personas</option>
+                    <option value="5-person">5 Personas</option>
+                    <option value="6-person">6 Personas</option>
+                    <option value="7-person">7 Personas</option>
+                  </select>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+                <!-- Selección de número de personas -->
+
+                <div class="icon-wrapper">
+                  <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+                  <input type="date" name="reservation-date" class="input-field">
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+                <!-- Selección de fecha de la reservación -->
+
+                <div class="icon-wrapper">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                  <select name="time" class="input-field">
+                    <option value="08:00am">08:00 am</option>
+                    <option value="09:00am">09:00 am</option>
+                    <option value="10:00am">10:00 am</option>
+                    <option value="11:00am">11:00 am</option>
+                    <option value="12:00pm">12:00 pm</option>
+                    <option value="01:00pm">01:00 pm</option>
+                    <option value="02:00pm">02:00 pm</option>
+                    <option value="03:00pm">03:00 pm</option>
+                    <option value="04:00pm">04:00 pm</option>
+                    <option value="05:00pm">05:00 pm</option>
+                    <option value="06:00pm">06:00 pm</option>
+                    <option value="07:00pm">07:00 pm</option>
+                    <option value="08:00pm">08:00 pm</option>
+                    <option value="09:00pm">09:00 pm</option>
+                    <option value="10:00pm">10:00 pm</option>
+                  </select>
+
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+                <!-- Selección de horario de la reservación -->
+
+              </div>
+
+              <textarea name="message" placeholder="Mensaje (Alguna observación o detalle que desees sobre la reserva)" autocomplete="off" class="input-field"></textarea>
+              <!-- Campo de mensaje adicional -->
+
+              <button type="submit" class="btn btn-secondary">
+                <span class="text text-1">Reservar una Mesa</span>
+                <span class="text text-2" aria-hidden="true">Reservar una Mesa</span>
+              </button>
+              <!-- Botón de envío del formulario -->
+
+            </form>
+
+            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
+              <!-- Sección de información de contacto -->
+
+              <h2 class="headline-1 text-center">Contáctanos</h2>
+
+              <p class="contact-label">Solicitud de Reservación</p>
+
+              <a href="tel:+1 123 456 7890" class="body-1 contact-number hover-underline">+1 123 456 7890</a>
+              <!-- Número de contacto -->
+
+              <div class="separator"></div>
+
+              <p class="contact-label">Ubicación</p>
+
+              <address class="body-4">
+                Avenida Malecón de la Reserva 610 <br>
+                Miraflores, Lima 18, Perú 
+                
+              </address>
+              <!-- Dirección del restaurante -->
+
+              <p class="contact-label">Horario de Almuerzo</p>
+
+              <p class="body-4">
+                Lunes a Domingo <br>
+                11:00 am - 2:30 pm
+              </p>
+
+              <p class="contact-label">Horario de Cena</p>
+
+              <p class="body-4">
+                Lunes a Domingo <br>
+                05:00 pm - 10:00 pm
+              </p>
+              <!-- Horario del restaurante -->
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- 
+        - #CARACTERÍSTICAS
+      -->
+      <section class="section features text-center" aria-label="características">
+        <div class="container">
+
+          <!-- Subtítulo de la sección -->
+          <p class="section-subtitle label-2">Por qué elegirnos</p>
+
+          <!-- Título principal de la sección -->
+          <h2 class="headline-1 section-title">Nuestras fortalezas</h2>
+
+          <ul class="grid-list">
+
+            <!-- Elemento de la lista de características -->
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <!-- Ícono de la característica -->
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="Icono de comida higiénica">
+                </div>
+
+                <!-- Título y descripción de la característica -->
+                <h3 class="title-2 card-title">Comida Higiénica</h3>
+
+                <p class="label-1 card-text">Garantizamos altos estándares de higiene en la preparación de nuestros platos.</p>
+
+              </div>
+            </li>
+
+            <!-- Otra característica -->
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="Icono de ambiente fresco">
+                </div>
+
+                <h3 class="title-2 card-title">Ambiente Fresco</h3>
+
+                <p class="label-1 card-text">Disfruta de un entorno limpio, seguro y acogedor para toda la familia.</p>
+
+              </div>
+            </li>
+
+            <!-- Otra característica -->
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="Icono de chefs expertos">
+                </div>
+
+                <h3 class="title-2 card-title">Chefs Expertos</h3>
+
+                <p class="label-1 card-text">Nuestro equipo de chefs está altamente capacitado para ofrecer experiencias gastronómicas únicas.</p>
+
+              </div>
+            </li>
+
+            <!-- Otra característica -->
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="Icono de eventos y fiestas">
+                </div>
+
+                <h3 class="title-2 card-title">Eventos y Fiestas</h3>
+
+                <p class="label-1 card-text">Organizamos eventos privados con menús personalizados para cada ocasión.</p>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- Elementos decorativos de la sección -->
+          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="Decoración"
+            class="shape shape-1">
+
+          <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="Decoración"
+            class="shape shape-2">
+
+        </div>
+      </section>
+
+
+       <!-- 
+        - #EVENTO
+      -->
+      <section class="section event bg-black-10" aria-label="evento">
+        <div class="container">
+
+          <!-- Subtítulo de la sección -->
+          <p class="section-subtitle label-2 text-center">Últimas Novedades</p>
+
+          <!-- Título principal de la sección -->
+          <h2 class="section-title headline-1 text-center">Próximos Eventos</h2>
+
+          <ul class="grid-list">
+
+            <!-- Primer evento -->
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <!-- Imagen y fecha del evento -->
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
+                    alt="Un sabor tan delicioso que querrás comer con los ojos." class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-15">03/02/2025</time>
+                </div>
+
+                <!-- Contenido del evento -->
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">Comida, Sabor</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    Un sabor tan delicioso que querrás comer con los ojos.
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Segundo evento -->
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
+                    alt="Un sabor tan delicioso que querrás comer con los ojos." class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-08">12/05/2025</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">Comida Saludable</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    Un sabor tan delicioso que querrás comer con los ojos.
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Tercer evento -->
+            <li>
+              <div class="event-card has-before hover:shine">
+
+                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
+                  <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
+                    alt="Un sabor tan delicioso que querrás comer con los ojos." class="img-cover">
+
+                  <time class="publish-date label-2" datetime="2022-09-03">27/09/2025</time>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle label-2 text-center">Receta</p>
+
+                  <h3 class="card-title title-2 text-center">
+                    Un sabor tan delicioso que querrás comer con los ojos.
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- Botón para ver más eventos o noticias -->
+          <a href="#" class="btn btn-primary">
+            <span class="text text-1">Ver Nuestro Blog</span>
+
+            <span class="text text-2" aria-hidden="true">Ver Nuestro Blog</span>
+          </a>
+
+        </div>
+      </section>
+    </article>
+  </main>
+
+
+    <!-- 
+    - #PIE DE PÁGINA
+  -->
+    <!--  Agregar el id al <footer> -->
+  <footer id="footer" class="footer section has-bg-image text-center" style="background-image: url('./assets/images/footer-bg.jpg')">
+
+    <div class="container">
+
+      <div class="footer-top grid-list">
+
+        <div class="footer-brand has-before has-after">
+
+          <!-- Logo del restaurante -->
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="Inicio de Grilli">
+          </a>
+
+          <!-- Dirección del restaurante -->
+          <address class="body-4">
+            Avenida Malecón de la Reserva 610, Miraflores, Lima 18, Perú
+          </address>
+
+          <!-- Correo de contacto -->
+          <a href="mailto:booking@grilli.com" class="body-4 contact-link">xxxx@grilli.com</a>
+
+          <!-- Número de contacto -->
+          <a href="tel:+88123123456" class="body-4 contact-link">Reservas: +1 123 456 7890</a>
+
+          <!-- Horario de apertura -->
+          <p class="body-4">
+            Abierto: 09:00 am - 01:00 pm
+          </p>
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+          <!-- Sección de suscripción a ofertas y novedades -->
+          <p class="title-1">Recibe Noticias y Ofertas</p>
+
+          <form action="" class="input-wrapper">
+            <div class="icon-wrapper">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <input type="email" name="email_address" placeholder="Tu correo electrónico" autocomplete="off" class="input-field">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">Suscribirse</span>
+
+              <span class="text text-2" aria-hidden="true">Suscribirse</span>
+            </button>
+          </form>
+
+        </div>
+
+        <!-- Enlaces rápidos del sitio -->
+        <ul class="footer-list">
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Inicio</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Menús</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Sobre Nosotros</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Nuestros Chefs</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Contacto</a>
+          </li>
+
+        </ul>
+
+        <!-- Redes sociales -->
+        <ul class="footer-list">
+          <!-- Links ancorados -->
+          <li>
+            <a href="https://www.facebook.com" class="label-2 footer-link hover-underline" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </li>          
+        
+          <li>
+            <a href="https://www.instagram.com" class="label-2 footer-link hover-underline" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </li>
+        
+          <li>
+            <a href="https://x.com" class="label-2 footer-link hover-underline" target="_blank" rel="noopener noreferrer">X</a>
+          </li>
+        
+          <li>
+            <a href="https://www.youtube.com" class="label-2 footer-link hover-underline" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </li>
+        
+          <li>
+            <a href="https://www.google.com/maps" class="label-2 footer-link hover-underline" target="_blank" rel="noopener noreferrer">Ubicación</a>
+          </li>
+        </ul>  
+                       
+      </div>
+
+      <div class="footer-bottom">
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- 
+    - BOTÓN PARA VOLVER ARRIBA
+  -->
+  <a href="#top" class="back-top-btn active" aria-label="volver arriba" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- 
+    - ENLACE A ARCHIVO JS PERSONALIZADO
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ENLACE A ICONOS DE IONICONS
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>
